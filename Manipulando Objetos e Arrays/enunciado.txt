@@ -1,0 +1,303 @@
+A lista a seguir tem como proposito incentivar seu raciocinio lógico e técnico.
+
+Aqui você vai desenvolver suas habilidades em funções, arrays, condicionais, loop's e objetos.
+
+A partir do enunciado, você deverá desenvolver a resolução.
+
+Antes de darmos incio as atividades, vamos modelar uma lista de departamentos.
+
+Estes departamentos fazem parte de uma empresa. Agora seu objetivo é criar um sistema que consiga facilitar a manipulação dos dados dos departamentos desta empresa.
+
+const listDepartment = [
+  {
+    departamentName: 'Financial',
+    employees:
+    [
+      {
+        name: 'Rose',
+        age: 26,
+        responsibility: 'Financial director',
+        salary: 5600
+      },
+      {
+        name: 'Stevem',
+        age: 32,
+        responsibility: 'Financial manager',
+        salary: 4200
+      },
+      {
+        name: 'Beca',
+        age: 26,
+        responsibility: 'Financial analyst',
+        salary: 2800
+      }
+    ],
+    working: true
+  },
+  {
+    departamentName: 'expedition',
+    employees:
+    [
+      {
+        name: 'Rooper',
+        age: 35,
+        responsibility: 'Expedition director',
+        salary: 5600
+      },
+      {
+        name: 'Maggie',
+        age: 22,
+        responsibility: 'Expedition manager',
+        salary: 4200
+      },
+      {
+        name: 'Thompson',
+        age: 41,
+        responsibility: 'Expedition analyst',
+        salary: 2800
+      }
+    ],
+    working: true
+  },
+  {
+    departamentName: 'capitation',
+    employees:
+    [
+      {
+        name: 'Saory',
+        age: 35,
+        responsibility: 'Capitation director',
+        salary: 5600
+      },
+      {
+        name: 'Silvia',
+        age: 22,
+        responsibility: 'Capitation manager',
+        salary: 4200
+      },
+      {
+        name: 'Sonem',
+        age: 41,
+        responsibility: 'Capitation analyst',
+        salary: 2800
+      },
+      {
+        name: 'Havi',
+        age: 41,
+        responsibility: 'Trainee Capitation manager',
+        salary: 1500
+      },
+      {
+        name: 'Margie',
+        age: 25,
+        responsibility: 'Capitation analyst',
+        salary: 2800
+      },
+      {
+        name: 'Victoria',
+        age: 18,
+        responsibility: 'Trainee Capitation analyst',
+        salary: 1500
+      }
+    ],
+    working: true
+  },
+]
+
+Dicas
+
+    Para acessar a propriedade de um objeto usamos o ponto (.)
+    Se alguma propriedade de um objeto for uma lista, podemos acessar da mesma maneira como faríamos com arrays aninhados.
+
+Da seguinte forma:
+
+    Acesse a propriedade que é uma lista por meio do ponto:
+    js
+    objetoX.lista
+
+    Faça um for até a extensão da lista e acesse pelo, o índice os elementos pertencentes a esta lista.
+    Se os elementos de uma lista interna a um objeto forem outros objetos, você pode manipular as propriedades deste elemento acessando o índice do objeto na lista.
+
+Exemplo:
+
+for(let i = 0; i < objeto.lista.length; i++){
+  objeto.lista[i].propriedade
+}
+
+Acima nós acessamos a propriedade de um elemento em uma lista mais interna.
+
+    Desenvolva uma função chamada howManyDepartments que retorne a quantidade de departamentos na lista.
+
+    Desenvolva uma função chamada ChangeDepartmentName que deverá receber o nome atual do departamento e um novo nome para ser atribuído a ele.
+
+    Percorra a lista de departamenta e busque pelo o nome procurado.
+
+    Se o nome do departamento não for encontrado, a função deve retornar: "Departament not found"
+
+    Exemplo - Sucesso:
+
+    ChangeDepartmentName('Financial', 'Financeiro')
+    Retorno: {departamentName: 'Financeiro', employees: Array(3), working: true}
+
+    Exemplo - Falha:
+
+    ChangeDepartmentName('Financ', 'Financeiro')
+    retorno: "Departament not found"
+
+    Desenvolva uma função chamada giveTheDepartmentABreak que alterne o valor da variável working, sempre que chamada.
+
+    Em resumo, se working estiver como true ficará false, caso esteja false ficará true, dando assim uma folga para o departamento, ou fazendo com que recomecem o trabalho.
+
+    Exemplo - Sucesso:
+
+    giveTheDepartmentABreak('expedition')
+    Retorno: {departamentName: 'expedition', employees: Array(3), working: false}
+
+    Exemplo - Falha:
+
+    giveTheDepartmentABreak('expediti')
+    retorno: "Departament not found"
+
+    Desenvolva uma função chamada insertNewDepartament que consiga adicionar novos departamentos a lista. A função deverá receber um novo departamento com:
+        departament é uma variável do tipo string.
+        employees é uma variável do tipo array.
+        working é uma variável do tipo boolean.
+
+Como parâmetro, com a lista de funcionários vazia.
+
+Exemplo:
+
+insertNewDepartament({departamentName: 'Marketing', employees: [], working: true})
+
+Retorno:
+
+{departamentName: 'Financial', employees: Array(3), working: true}
+{departamentName: 'expedition', employees: Array(3), working: true}
+{departamentName: 'capitation', employees: Array(6), working: true}
+{departamentName: 'Marketing', employees: Array(0), working: true}
+
+5.Desenvolva uma função chamada inserNewEmployeeInDepartament que consiga adicionar um novo funcionário ao departamento.A função deve receber o nome do departamento como parâmetro e um objeto pessoa com:
+
+        name é uma variável do tipo string
+        age é uma variável do tipo number
+        responsibility é uma variável do tipo string
+        salary é uma variável do tipo number
+
+    Percorra a lista de departamentos.
+    Verifique se o nome do departamento passado existe na lista.
+        Se não existir, retorne: 'Departament not found'
+    Percorra as propriedades do departamento e encontre a propriedade employees.
+    Insira o novo funcionário a lista de funcionários.
+
+Retornar somente departamento atualizado.
+
+Exemplo:
+
+inserNewEmployeeInDepartament( 'Financial', {name:'Rosemary', age:44, responsibility: 'Financial expedition director', salary: 15600})
+
+Retorno
+
+
+departamentName: "Financial"
+  employees: Array(4)
+    {name: 'Rose', age: 26, responsibility: 'Financial director', salary: 5600}
+    {name: 'Stevem', age: 32, responsibility: 'Financial manager', salary: 4200}
+    {name: 'Beca', age: 26, responsibility: 'Financial analyst', salary: 2800}
+    {name: 'Rosemary', age: 44, responsibility: 'Financial expedition director', salary: 15600}
+  working: true
+
+6. Desenvolva uma função chamada howManyEmployeesInDepartament que recebe o nome do departamento como parâmetro e que consiga verificar quantos funcionários estão lotados naquele departamento.
+
+Caso o departamento não seja encontrado, retornar: "Departament not found"
+
+Exemplo - Sucesso:
+
+howManyEmployeesInDepartament('expedition')
+
+Retorno: 4
+
+Exemplo - Falha:
+
+howManyEmployeesInDepartament('expediti')
+
+retorno: "Departament not found"
+
+7. Desenvolva uma função chamada departamentPayrollCalculation que recebe o nome do departamento como parâmetro e que consiga realizar a soma dos salários de todos os funcionários do departamento.
+
+Exemplo - Sucesso:
+
+departamentPayrollCalculation('expedition')
+
+Retorno: 5600
+
+Exemplo - Falha:
+
+departamentPayrollCalculation('expediti')
+
+retorno: "Departament not found"
+
+8.Desenvolva uma função chamada isTheDepartamentYoungOrOld que recebe o nome do departamento como parâmetro e que consiga realizar o calculo da média das idades dos funcionários do departamento.
+
+Retorne a média da idade e uma mensagem informando se o departamento é jovem ou experiente.
+
+Quando a média estiver abaixo de 35 anos é classificado como jovem acima é experiente.
+
+Se o departamento não for encontrado, retorne: "Departament not found".
+
+Exemplo - Sucesso:
+
+departamentPayrollCalculation('expedition')
+
+Retorno:'The average is 33.66: departament young'
+
+Exemplo - Falha:
+
+departamentPayrollCalculation('expediti')
+
+retorno: "Departament not found"
+
+9.Desenvolva uma função chamada 
+
+departamentAverageSalary
+
+que recebe o nome do departamento como parâmetro e que consiga calcular a média dos salários pagos naquele departamento. Se o departamento não for encontrado, retorne: "Departament not found". Ao fazer o retorno da média, trate as dizimas periódicas, retorne o valor com apenas duas casas após a vírgula. Com departmento encontrado e a média tratada e realizada, retorne: 'This departament average salary: 
+
+média
+
+Exemplo - Sucesso:
+
+departamentAverageSalary('capitation')
+
+Retorno:'This departament average salary: 3066.66'
+
+Exemplo - Falha:
+
+departamentAverageSalary('campitation')
+
+retorno: "Departament not found"
+
+10. Desenvolva uma função chamada departamentSituation que consiga definir se o departamento está saudável ou não.
+
+Para isso você vai receber três parâmetros:
+
+    departamentName - O nome do departamento que deseja consultar.
+    maximumPayrollAmount - O valor máximo que o departamento pode ter com a folha de pagamento.
+    MaximumAmountOfEmployees - A quantidade máxima de funcionários que o departamento pode ter.
+
+Caso esteja tudo nos limites naquele departamento, retorne: 'The department is healthy',
+
+caso contrário retorne: 'The department needs attention'.
+
+Se o valor passado para busca do departamento não for encontrado, retorne: "Departament not found". 
+
+Exemplo - Sucesso:
+
+departamentSituation('capitation', 100000,10)
+
+Retorno:'The department is healthy'
+
+Exemplo - Falha:
+
+departamentAverageSalary('campitation',100000,10)
+
+retorno: "Departament not found"
