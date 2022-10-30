@@ -1,0 +1,125 @@
+1. Verificando aprovações nas matérias
+
+Dada a seguinte lista de alunos:
+
+const listaAlunos = [
+    {
+        nome: 'João',
+        curso: 'Ciencia da Computação',
+        turno: 'Noturno',
+        mediaCorte: 7,
+        materias: [
+            {
+                nome: 'Calculo I',
+                avaliacoes: [6, 8, 10, 8]
+            },
+            {
+                nome: 'Pensamento Computacional',
+                avaliacoes: [6, 8, 6, 8]
+            },
+            {
+                nome: 'Linguagem Orientada a Objetos',
+                avaliacoes: [7, 8, 9, 10]
+            },
+            {
+                nome: 'Arquitetura de Organização de Computadores',
+                avaliacoes: [6, 8, 7, 8]
+            }
+        ]
+    },
+    {
+    ...
+]
+
+Onde cada aluno é representado por um objeto, contendo os seguintes atributos:
+
+    nome;
+    curso;
+    turno;
+    mediaCorte;
+    matérias: uma lista das matérias cursadas pelo aluno, onde cada matéria é representada por um objeto, contendo:
+        nome;
+        avaliacoes: uma lista com as notas obtidas pelo aluno em cada avaliação realizada no semestre.
+
+Sua tarefa é determinar em quantas matérias o aluno foi aprovado.
+
+Crie uma função chamada calculaMedia que calcula a média total do aluno, a partir das notas que ele obteve nas avaliações do semestre.
+
+Em seguida, crie uma propriedade chamada status para cada matéria.
+
+Se a média do aluno for maior ou igual que a média de corte, a nova propriedade deve receber o valor true, o que significa que o aluno foi aprovado naquela matéria.
+
+Caso contrário, a propriedade deve receber o valor false.
+
+2. Verificando aprovação no semestre
+
+Ainda utilizando a mesma lista de alunos do exercício anterior, neste exercício sua tarefa é verificar se o aluno foi aprovado no semestre atual e poderá prosseguir para o próximo.
+
+Você precisará criar duas novas propriedades para o objeto aluno:
+
+    quantidadeAprovacoes: um inteiro contendo a quantidade de matéria que o aluno foi aprovado;
+    status: irá receber um valor boleano, informando se o aluno foi aprovado no semestre ou não. Isso será determinado pela quantidade de matérias em que o aluno foi aprovado, se ele estiver aprovado em 70% ou mais das matérias, significa que ele está aprovado e o status deve ser true. Caso contrário, o aluno foi reprovado, e o status é false.
+
+3. Verificando destino de passageiros
+
+Dado o seguinte objeto ônibus:
+
+const onibus = {
+    capacidade: 40,
+    origem: 'Curitiba-PR',
+    destino: 'Rio de Janeiro-RJ',
+    paradas: [
+        'São Paulo-SP',
+        'Campinas-SP',
+        'São José dos Campos-SP',
+        'Volta Redonda-RJ'
+    ],
+    passageiros: [
+        {
+            nome: 'Luis da Silva',
+            rg: '1234567890',
+            bilhete: {
+                origem: 'Curitiba-PR',
+                destino: 'São José dos Campos-SP',
+                poltrona: 15,
+            }
+        },
+        {
+            nome: 'João da Silva',
+            rg: '1234567891',
+            bilhete: {
+                origem: 'São Paulo-SP',
+                destino: 'Rio de Janeiro-RJ',
+                poltrona: 16,
+            }
+        },
+        {
+        ...
+    ]
+}
+
+Um ônibus possui as seguintes propriedades:
+
+    capacidade: um número inteiro com a quantidade total de lugares do ônibus;
+    origem;
+    destino;
+    paradas: uma lista com todas as cidades em que o ônibus passa, entre a origem e o destino, e faz uma parada para a entrada e saída de passageiros;
+    passageiros: uma lista com todos os passageiros presentes no ônibus, onde cada passageiro é representado por um objeto, contendo:
+        nome;
+        rg;
+        bilhete: também representado por um objeto, contendo detalhes sobre a viagem do passageiro:
+            origem;
+            destino;
+            poltrona.
+
+Sua tarefa é determinar quais passageiros irão descer do ônibus em determinada parada.
+
+Desenvolva um método que recebe a parada atual como parâmetro, um valor do tipo string no mesmo formato armazenado no objeto ônibus: "Cidade-UF". Esse método deverá verificar em quais passageiros o destino é igual à parada atual do ônibus.
+
+Em seguida, deve retornar um array com todos os passageiros que irão descer na parada atual.
+
+4. Atualizando status dos passageiros
+
+Neste exercício, sua tarefa é sinalizar de alguma forma que os passageiros realmente chegaram ao seu destino.
+
+Para isso, você vai precisar refatorar o método desenvolvido no exercício anterior, para adicionar uma nova propriedade aos passageiros, chamada viagemConcluida, que receberá o valor true, caso o passageiro tenha chegado ao seu destino.
