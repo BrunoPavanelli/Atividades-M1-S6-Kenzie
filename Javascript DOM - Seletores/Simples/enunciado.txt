@@ -1,0 +1,43 @@
+Passo a passo
+
+    Vamos criar uma tag H1
+    Agora, vamos inserir um texto na tag criada
+
+        <h1>Aprendendo DOM</h1>
+
+    Crie uma tag Script ao final da tag Body
+
+        <body>
+            <h1>Aprendendo DOM</h1>
+            <script></script>
+        </body>
+
+    Dentro da tag Script acesse o elemento Window
+
+        <body>
+          <h1>Aprendendo DOM</h1>
+          <script>
+            window                                
+          </script>
+        </body>
+
+    Agora, acesse o elemento Document
+
+        <body>
+          <h1>Aprendendo DOM</h1>
+          <script>
+            window.document                             
+          </script>
+        </body>
+
+    Para finalizar, selecione o elemento primeiro elemento H1 da sua página
+
+        <body>
+          <h1>Aprendendo DOM</h1>
+          <script>
+           window.document.querySelector('h1')                             
+          </script>
+        </body>
+
+O resultado esperado, será:
+> <h1>Aprendendo DOM</h1>
