@@ -1,0 +1,32 @@
+Introdução
+
+Você foi contratado para participar de um projeto. O projeto consiste no desenvolvimento de uma agenda eletrônica.
+
+Você deverá desenvolver a estrutura de dados da aplicação. Os requisitos pertinentes ao desenvolvimento foram fornecidos e são os seguintes:
+O modelo
+
+Modele um Objeto Agenda, que será responsável por armazenar contatos. Ela terá a seguinte propriedade:
+
+    nome - nome da agenda do tipo string.
+    contatos - que deverá ser inicializado com um array vazio.
+
+Você também precisará desenvolver as seguintes funções:
+
+adicionarContato: que irá receber um objeto pessoa por parâmetro, cada objeto pessoa terá propriedades:
+
+    nome
+    telefone
+
+Adicione a pessoa à lista de contatos. Retorne a lista de contatos atualizada.
+
+listarContatos: que será responsável por imprimir cada contato no console com a seguinte mensagem:
+
+"1 - Nome: {nome da pessoa} Telefone: {telefone da pessoa}".
+
+pesquisarContato: que irá receber um nome como parâmetro, deverá realizar uma pesquisa na lista de contato, e retornar o contato conforme a pesquisa do usuário.
+
+editarContato: que irá receber como parâmetro:
+
+posição(índice) - responsável por encontrar o contato;
+
+nome e telefone - responsável por receber os novos valores.
