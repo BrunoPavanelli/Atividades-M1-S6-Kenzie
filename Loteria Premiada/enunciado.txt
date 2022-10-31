@@ -1,0 +1,45 @@
+ Nessa atividade vamos treinar nossos conhecimentos em sintaxe e lógica com JS
+🧠 Exercício 1- Pessoa Premiada
+
+Você está trabalhando na loteria federal e um cliente se aproxima e fala que foi premiado.
+
+Os dados do ganhador já estão no sistema e você agora só deve comparar se as informações prestadas pelo suposto ganhador são realmente verdadeiras. Pegue os documentos necessários e faça a consulta.
+Dados do Ganhador
+
+ let ganhador = {
+    nome: 'Adamastor',
+    nascimento: '16/09/1986',
+    cpf: '123.321.789-98',
+    estadoCivil: 'Casado'
+}
+
+Lembre-se que esta é uma estrutura de objeto e não de array. Sendo assim, para acessar alguma propriedade deve usar o .
+
+    Crie uma função que irá receber os dados do suposto ganhador, não precisa de todos, mas é essencial verificar o nome e o cpf.
+    Dentro da função você deverá comparar os dados recebidos com os dados existentes.
+    A função deve retornar uma string: 'É ganhador!' ou 'É alarme falso!'
+    Cuidado com as formas de digitação! Normalize o nome para que a primeira letra sempre seja maiúscula e as restantes minúsculas.
+
+Dica!
+
+Você pode fazer isso deixando toda string em caixa baixa e selecionar a primeira letra da string(str[0]) recebida e usar método toUpperCase()
+
+function eGanhador(pessoa){
+    // Lógica    
+}
+Console.log(eGanhador({nome: 'adamastor', cpf : '123.321.789-98'}))
+// O retorno deverá ser 'É ganhador!'
+
+🧠 Exercício 2- Quem veio atrás do prêmio ?
+
+O gerente da loteria, pediu para que você guarde as informações das pessoas que vieram atrás do prêmio.
+
+Antes você recebia o objeto e fazia a comparação. Agora você precisa armazená-lo em uma variável e inseri-lo em uma lista, mediante a uma condição.
+
+A lista deverá ter o nome que achar mais conveniente.
+
+    Crie uma variável para guardar o objeto recebido, pode chamar esse objeto de data
+    Com base no exercício anterior insira todos que não ganharam o prêmio em um array.
+    Crie uma função que recebe um objeto.
+    Crie um array e insira o objeto passado.
+    Retorne uma string: '1 Pessoa tentou retirar o prêmio'. 1 é o tamanho de seu array. Incremente o retorno para que retorne também o nome das pessoas que tentaram realizar o saque.
