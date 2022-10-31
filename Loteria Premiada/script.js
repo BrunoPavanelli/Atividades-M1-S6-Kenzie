@@ -29,6 +29,7 @@ function somaTentativas(pessoa) {
     if (comparaDados(data.nome, data.cpf) == 'É alarme falso!') {
         listaDeReindivicadores.push(data)
     }
+    //Caso a lista ficasse com mais de um índice, aqui eu faria um loop for para contar cada posição, criando uma lista com o nome de cada posição, e retornaria essa lista no lugar de data.nome!
     return `${listaDeReindivicadores.length} Pessoa tentou retirar o prêmio: ${data.nome}`
 }
 let reindivicador = {
