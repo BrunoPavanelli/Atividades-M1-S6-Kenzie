@@ -1,0 +1,46 @@
+
+    Vamos iniciar criando uma tag Input utilizando o createElement e armazenando em uma variável
+
+                      
+
+        const tagInput = document.createElement('input')
+                      
+
+                  
+
+    Agora vamos inserir não um texto, mas sim um placeholder, pois estamos tratando de um input
+
+                        
+
+        tagInput.placeholder = "Digite seu texto aqui"
+                        
+
+                    
+
+    Vamos voltar no HTML e criar uma tag Form
+
+                        
+         
+          <form></form>
+                        
+
+                    
+
+    Ótimo, agora temos um elemento para inserir nosso input, vamos acessá-lo e inseri-lo em uma variável
+
+                          
+
+        const form = document.querySelector('form')
+                          
+
+                      
+
+    Bom, agora, para finalizar, iremos inserir dentro do nosso form o input criado anteriomente
+
+                          
+
+        form.appendChild(tagInput)
+                          
+
+                      
+
