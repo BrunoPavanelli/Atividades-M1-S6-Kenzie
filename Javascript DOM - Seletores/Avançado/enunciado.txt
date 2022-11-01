@@ -1,0 +1,15 @@
+Vamos pensar na seguinte situação:
+
+Precisamos acessar o primeiro elemento da página que contenha a class .title
+
+    <body>
+      <h1 class="title">Aprendendo DOM</h1>
+      <h3 class="title">Aprendendo DOM</h3>
+    </body>
+
+OBS: O Console só deve renderizar o elemento H1 que conter o CLASS title
+
+O resultado deverá ser:
+
+    > <h1 class="title">Aprendendo DOM</h1>
+

@@ -1,0 +1,14 @@
+Vamos pensar na seguinte situação:
+
+Precisamos acessar um elemento pelo ID
+
+    <body>
+      <h1 id="title">Aprendendo DOM</h1>
+    </body>
+
+Crie um código que acesse a tag com ID title e imprima o resultado no console
+
+O resultado deverá ser:
+
+    > <h1 id="title">Aprendendo DOM</h1>
+
