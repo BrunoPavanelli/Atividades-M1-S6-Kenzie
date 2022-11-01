@@ -1,0 +1,49 @@
+
+    Vamos criar uma tag P utilizando o createElement
+
+
+        document.createElement('p')
+                                    
+
+    Vamos armazenar a criação da tag em uma variável
+
+
+        const tag = document.createElement('p')
+                                
+
+    Certo, agora podemos imprimir no console a variável tag
+
+                                    
+
+        console.log(tag)
+                                    
+
+                                
+
+        Resultado esperado:
+
+                                
+         
+        > <p></p>
+                                
+
+                                
+
+    Bom, agora que conferimos se está tudo funcionando. Vamos inserir um texto na Tag P
+
+                                    
+
+        tag.innerText = "Olá, eu sou uma tag criada pelo JS"
+                                    
+
+                                
+
+    Tag P criada e com seu conteúdo, agora podemos dizer em qual Tag o nosso P será renderizado no documento
+
+                    
+
+        document.querySelector('body').appendChild(tag)
+                    
+
+                
+
