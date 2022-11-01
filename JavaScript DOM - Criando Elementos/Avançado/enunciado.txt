@@ -1,0 +1,13 @@
+Transcreva o seguinte código HTML para JS utilizando os métodos de criação de elementos
+
+                  
+     
+    <article>
+        <h1>Título do Post</h1>
+        <p>Descrição do Post</p>
+        <a>Ver post completo</a>
+    </article>
+                  
+
+              
+
